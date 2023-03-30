@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 9</title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Calculadora de Primo</legend><br>
+            <div class="res" id="res">
+            </div><br>
+            <button onclick="calc()">Calcular</button>
+            </fieldset>
+
+            <script> 
+                function calc() {
+                const prime = [];
+                var num;
+                var i;
+                var j;
+                var n = 1;
+                var ver;
+                prime[0] = 2;
+                num = 3;
+                    for (i = 2; i < num; i++){
+                    for (j = 2; j < num; j++){
+                       if (num % j == 0){
+                        ver = false;
+                        break;
+                       }
+                       ver = true;
+                    }
+                    if(ver == false){
+                        console.log("O número " + num + " não é primo.");
+                    }
+                    if(ver == true){
+                        console.log("O número " + num + " é primo.")
+                        prime[n] = num;
+                        console.log(prime[n]);
+                        n++;
+                    }
+                    if(n == 1001){
+                        break;
+                    }
+                    num++;
+                }
+                  document.getElementById("res").innerHTML = "O número primo de casa " + n + " é: " + prime[1000];
+                }
+                </script>
+</body>

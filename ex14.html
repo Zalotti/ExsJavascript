@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 14</title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Potência Numéria</legend><br>
+            <div id="res">
+            </div><br>
+            </fieldset>
+
+            <script> 
+                var a;
+                var i; 
+                var b;
+                a = 2; 
+                i = 0;
+                container = document.getElementById("res");
+                while(i < 9){
+                b = a ** i;
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[i].innerHTML = a + "<sup>" + i + "</sup> = " + b;
+                i++;
+                }
+                </script>
+</body>

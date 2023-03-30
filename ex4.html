@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4</title>
+</head>
+
+<body>
+
+
+            <fieldset>
+            <legend>Confirmar Idade</legend><br>
+            <label for="age">Idade:</label><br>
+            <input type="number" name="age" id="age" min="0" max="100" step="0.01 required" value="0"><br>
+            <button onclick="minormajor()">Verificar</button>
+            </fieldset>
+
+            <script>
+                var age;
+                function minormajor() {
+                  age = parseInt(document.getElementById("age").value);
+                  if (age >= 18){
+                  alert("Você é maior de idade. 👴");
+                  }
+                  else{
+                  alert("Você é menor de idade. 👶")
+                  }
+                }
+                </script>
+</body>

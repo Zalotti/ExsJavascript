@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 6</title>
+</head>
+
+<body>
+
+
+            <fieldset>
+            <legend>Calculadora</legend><br>
+            <label for="height">Altura:</label><br>
+            <input type="number" name="height" id="height" min="0" max="100" step="0.01 required"><br>
+            <label for="weight">Peso:</label><br>
+            <input type="number" name="weight" id="weight" min="0" max="100" step="0.01 required"><br>
+            <br>
+            <div class="res" id="res">
+            </div><br>
+            <button onclick="calcIMC()">Calcular</button>
+            </fieldset>
+
+            <script>
+                var height;
+                var weight;
+                var imc;
+                function calcIMC() {
+                  height = document.getElementById("height").value;
+                  weight = document.getElementById("weight").value;
+                  imc = parseFloat(weight)/Math.pow(parseFloat(height), 2);
+                  document.getElementById("res").innerHTML = "Seu IMC é: " + imc;
+                }
+                </script>
+</body>

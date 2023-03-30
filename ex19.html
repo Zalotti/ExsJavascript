@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 19</title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Ordenar Números</legend><br>
+            <div id="res">
+            </div><br>
+            </fieldset>
+
+            <script> 
+                const array = Array(10).fill(0);
+                const num = Array(10).fill(0);
+                var val = '';
+                var i; 
+                container = document.getElementById("res");
+                for(i = 0; i <= 19; i++){
+                val = parseInt(Math.random() * 100);
+                array[i] = val;
+                }
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[0].innerHTML = "<br>Números: " + array;
+                
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[1].innerHTML = "Números Ordenados: " + array.sort();
+                </script>
+</body>

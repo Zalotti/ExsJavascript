@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8</title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Calculadora</legend><br>
+            <div class="res" id="res">
+            </div><br>
+            <button onclick="calc()">Calcular</button>
+            </fieldset>
+
+            <script>
+                const fibo = [];
+                var val;
+                var sum;
+                var i;
+                var par = 0;
+                fibo[0] = 0;
+                fibo[1] = 1;
+                function calc() {
+                  for(i = 2; parseInt(fibo[i - 1]) < 50000; i++){
+                    val = parseInt(fibo[i - 1]) + parseInt(fibo[i - 2]);
+                    if(val > 50000){
+                        break;
+                    }
+                    fibo[i] = val;
+                    console.log(fibo[i]);
+                    if((fibo[i] % 2) == 0){
+                        console.log("PAR ENCONTRADO")
+                        par = fibo[i] + par;
+                    }
+                  }
+                  document.getElementById("res").innerHTML = "A soma de todos pares é: " + par;
+                }
+                </script>
+</body>

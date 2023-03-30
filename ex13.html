@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 13</title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Potência Aleatória</legend><br>
+            <div id="res">
+            </div><br>
+            <button onclick="randPow()">Calcular</button>
+            </fieldset>
+
+            <script> 
+                function randPow() {
+                var a;
+                var n; 
+                var b; 
+                a = parseInt(Math.random() * 100);
+                n = parseInt(Math.random() * 100);
+                b = a ** n;
+                document.getElementById("res").innerHTML = "<br>" + a + " ^ " + n + " = " + b;
+                }
+                </script>
+</body>

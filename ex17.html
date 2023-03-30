@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 17 </title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Soma Diagonal</legend><br>
+            <div id="res">
+            </div><br>
+            </fieldset>
+
+            <script> 
+                const array = Array(20).fill(0);
+                const num = Array(20).fill(0);
+                var val = '';
+                var i; 
+                var j;
+                var soma = 0;
+                container = document.getElementById("res");
+                for(i = 0; i <= 19; i++){
+                for(j = 0; j <= 19; j++){
+                console.log(i);
+                console.log(j);
+                val = parseInt(Math.random() * 100);
+                array[j] = val;
+                }
+                soma = array[i] + soma;
+                num[i] = array[i];
+                console.log("Número que deve ser somado:" + array[i])
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[i].innerHTML = array;
+                }
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[20].innerHTML = "<br>Os números encontrados foram: " + num;
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[21].innerHTML = "A soma deles é: " + soma;
+                </script>
+</body>

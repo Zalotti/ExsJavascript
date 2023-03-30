@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11</title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Calculadora de Equação de Segundo Grau</legend><br>
+            <label for="numA">A:</label><br>
+            <input type="number" name="numA" id="numA" min="0" max="100" step="0.01 required" value="0"><br>
+            <label for="numB">B:</label><br>
+            <input type="number" name="numB" id="numB" min="0" max="100" step="0.01 required" value="0"><br>
+            <label for="numC">C:</label><br>
+            <input type="number" name="numC" id="numC" min="0" max="100" step="0.01 required" value="0"><br>
+            <div id="res">
+            </div><br>
+            <button onclick="calc()">Calcular</button>
+            </fieldset>
+
+            <script> 
+                function calc() {
+                var a;
+                var b;
+                var c;
+                var ac;
+                var b2;
+                var ac2;
+                var delta;
+
+                a = parseInt(document.getElementById("numA").value);
+                b = parseInt(document.getElementById("numB").value);
+                c = parseInt(document.getElementById("numC").value);
+                
+                container = document.getElementById("res");
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[0].innerHTML = "<br>" + a + "x² + " + b + "x + " + c;
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[1].innerHTML = "Δ = b² - 4ac";
+                ac = a*c;
+                b2 = Math.pow(b, 2);
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[2].innerHTML = "Δ = " + b2 +" - 4(" + ac + ")";
+                ac2 = 4 * ac;
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[3].innerHTML = "Δ = " + b2 +" - " + ac2;
+                delta = b2 - ac2;
+                container.innerHTML+='<div class="items"></div>';
+                document.getElementsByClassName("items")[4].innerHTML = "Δ = " + delta;
+                }
+                </script>
+</body>

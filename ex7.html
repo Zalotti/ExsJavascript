@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7</title>
+</head>
+
+<body>
+            <fieldset>
+            <legend>Calculadora</legend><br>
+            <div class="res" id="res">
+            </div><br>
+            <button onclick="calc()">Calcular</button>
+            </fieldset>
+
+            <script>
+                const three = [];
+                var sumThree;
+                const five = [];
+                var sumFive;
+                var i;
+                var value;
+                function calc() {
+                  for(i = 0; i <= 1000; i++){
+                    value = i;
+                    three[i] = 3 * parseInt(value);
+                    five[i] = 5 * parseInt(value);
+                    console.log(three[i]);
+                    console.log(five[i]);
+                  }
+                  sumThree = 0;
+                  sumFive = 0; 
+                  for(i = 0; i <= 1000; i++){
+                    sumThree = parseInt(three[i]) + parseInt(sumThree);
+                    console.log(sumThree);
+                    sumFive = parseInt(five[i]) + parseInt(sumFive);
+                    console.log(sumFive);
+                  }
+                  document.getElementById("res").innerHTML = "A soma de todos múltiplos de 3 é: " + sumThree + "<br>A soma de todos múltiplos de 5 é: " + sumFive;
+                }
+                </script>
+</body>
